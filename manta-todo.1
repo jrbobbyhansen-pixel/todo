@@ -1,0 +1,52 @@
+.TH MANTA-TODO 1 "manta-todo v1.0.0" "Manta Tools" "User Commands"
+.SH NAME
+manta-todo \- command-line todo list manager
+.SH SYNOPSIS
+.B todo <command> [options]
+.SH DESCRIPTION
+Add, list, complete, and delete tasks. Tasks are stored in ~/.todo/tasks.json. Zero external dependencies.
+.SH OPTIONS
+.TP
+.B add <description>
+Add a new task
+.TP
+.B list, ls
+List pending tasks
+.TP
+.B list -a, ls -a
+List all tasks (including completed)
+.TP
+.B done <id>
+Mark a task as done
+.TP
+.B delete, rm <id>
+Delete a task
+.TP
+.B --version
+Show version and exit
+.SH EXAMPLES
+.TP
+Add a task
+.B todo add "Finish the quarterly report"
+.TP
+List tasks
+.B todo list
+.TP
+Mark task 3 as done
+.B todo done 3
+.TP
+Delete task 5
+.B todo delete 5
+.SH EXIT CODES
+.TP
+.B 0
+Success
+.TP
+.B 1
+Error (invalid id, etc.)
+.SH AUTHOR
+Bobby Hansen Jr. (Hansen Capital Group LLC)
+.SH REPORTING BUGS
+https://github.com/jrbobbyhansen-pixel/todo/issues
+.SH COPYRIGHT
+Copyright 2026 Hansen Capital Group LLC. License MIT.
